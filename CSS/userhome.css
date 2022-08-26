@@ -1,0 +1,83 @@
+
+
+.header{
+    display: flex;
+    justify-content: space-between;
+    padding: 15px;
+}
+
+.book-category{
+    padding: 10px 30px;
+}
+
+.cat-Title{
+    display: flex;
+    justify-content: space-between;
+    margin-bottom: 10px;
+}
+
+.viewmorebtn{
+    text-decoration: none;
+}
+
+.cat-list{
+    display: flex;
+    align-items: center;
+    gap: 30px;
+    overflow-y: hidden;
+    overflow-x: auto;
+}
+
+.cat-list-expand{
+    display: flex;
+    align-items: center;
+    gap: 30px;
+    flex-wrap: wrap;
+}
+
+.cat-list::-webkit-scrollbar{
+    display: none;
+}
+
+.book-item-card,
+.book-item-dtl{
+    display: flex;
+    flex-direction: column;
+    gap: 5px;
+    text-decoration: none;
+}
+
+.bookname{
+    color: black;
+    display: inline-block;
+    width: 150px;
+    white-space: nowrap;
+    overflow: hidden !important;
+    text-overflow: ellipsis;
+}
+
+.bookname::first-letter,
+.bookheading::first-letter{
+    text-transform: uppercase;
+}
+
+.bookactions{
+    display: flex;
+    justify-content: space-between;
+    gap: 5px;
+}
+
+.bookdtlsec{
+    width: 50%;
+    padding: 30px;
+    display: flex;
+    flex-direction: column;
+    justify-content: space-between;
+}
+.bookimgsec{
+    padding: 30px;
+}
+.bookdtlsec table{
+    margin-top: 20px;
+    width: 300px;
+}

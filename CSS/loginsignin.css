@@ -1,0 +1,67 @@
+.mainbody {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    height: 90vh;
+}
+
+form {
+    background-color: white;
+    padding: 30px;
+    min-width: 350px;
+    min-height: 400px;
+    display: flex;
+    flex-direction: column;
+    justify-content: space-between;
+    border: 1px solid gray;
+    border-radius: 10px;
+}
+
+.formcontrols {
+    display: flex;
+    flex-direction: column;
+    align-items: stretch;
+    gap: 2px;
+}
+
+.inputfield {
+    border: none;
+    outline: none;
+    height: 35px;
+    font-size: 15px;
+    background-color: #E1E1E1;
+    padding-left: 10px;
+    margin-bottom: 10px;
+    border-radius: 5px;
+    border-bottom: 2px solid gray;
+    transition: all 0.3s ease;
+}
+
+.inputfield:focus {
+    border-bottom: 2px solid var(--colorbtnprime);
+    background-color: #ceecff;
+}
+
+.heading1 {
+    font-size: 40px;
+    text-align: center;
+}
+
+.ilabel2{
+    text-align: center;
+}
+
+.loginbutton {
+    background-color: var(--colorbtnprime);
+    border: none;
+    color: white;
+    font-size: 20px;
+    padding: 10px;
+    font-weight: bold;
+    border-radius: 5px;
+    transition: all 0.2s ease-in-out;
+}
+
+.loginbutton:hover {
+    background-color: var(--colorbtnprimehover);
+}

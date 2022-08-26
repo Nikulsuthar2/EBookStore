@@ -1,0 +1,136 @@
+:root {
+    --navbg: rgb(255, 255, 255);
+    --fontfam: 'Segoe UI';
+    --colorbtnprime: royalblue;
+    --colorbtnprimehover: #8aa7ff;
+    --colorbtnsec: rgb(255, 136, 0);
+    --colorbtnsechover: rgb(255, 184, 103);
+    --logocolor: royalblue;
+}
+
+* {
+    margin: 0;
+    padding: 0;
+}
+
+body{
+    overflow: hidden;
+    font-family: var(--fontfam);
+}
+
+nav {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    padding: 10px;
+    padding-left: 30px;
+    padding-right: 30px;
+    position: sticky;
+    background-color: white;
+    z-index: 2;
+    top: 0;
+}
+
+.Logo {
+    color: var(--logocolor);
+    font-weight: bold;
+    font-size: 20px;
+}
+
+.mainbody {
+    height: 90vh;
+    overflow-y: auto;
+}
+
+.nav-menu{
+    display: flex;
+    gap: 20px;
+    align-items: center;
+}
+
+.nav-menu-btn{
+    text-decoration: none;
+    color: black;
+}
+
+.nav-menu-btn:hover{
+    color: royalblue;
+}
+
+.nav-actions{
+    display: flex;
+    align-items: center;
+    gap: 20px;
+}
+
+.primarybtn{
+    padding: 5px 10px;
+    display: flex;
+    align-items: center;
+    border: none;
+    border-radius: 5px;
+    color: white;
+    text-decoration: none;
+    background-color: var(--colorbtnprime);
+}
+
+.secbtn{
+    padding: 5px 10px;
+    display: flex;
+    text-decoration: none;
+    justify-content: center;
+    align-items: center;
+    border: 2px solid black;
+    border-radius: 5px;
+    background-color: white;
+}
+
+.secbtn a{
+    text-decoration: none;
+    color: black;
+    font-weight: bold;
+}
+
+.primarybtn:hover{
+    background-color: var(--colorbtnprimehover);
+}
+
+.secbtn:hover{
+    background-color:#8aa7ff;
+}
+
+.primarybtn a{
+    color: white;
+    text-decoration: none;
+}
+
+.buybtn{
+    padding: 5px 10px;
+    border-radius: 5px;
+    color: white;
+    text-decoration: none;
+    background-color: royalblue;
+}
+.buybtn:hover{
+    background-color: rgb(129, 160, 255);
+}
+
+.searchbox,.searchbtn{
+    height: 30px;
+}
+
+.flex{
+    display: flex;
+}
+
+.juspabet{
+    justify-content: space-between;
+}
+
+.jucent{
+    justify-content: center;
+}
+
+.algnc{
+    align-items: center;
+}

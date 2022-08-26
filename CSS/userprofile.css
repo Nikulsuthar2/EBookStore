@@ -1,0 +1,21 @@
+.user-info-section{
+    display: flex;
+    flex-direction: column;
+    margin-left: 20px;
+    margin-right: 20px;
+    gap: 10px;
+    border: 1px solid black;
+}
+
+.user-info{
+    padding: 20px;
+}
+.user-books{
+    width: 100%;
+    padding: 10px;
+    
+}
+.info{
+    display: flex;
+    gap:50px;
+}
