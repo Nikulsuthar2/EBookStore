@@ -4,30 +4,23 @@ include 'db.php';
 
 $pagetitle = "Add E-Book";
 if(!isset($_SESSION['ausername']))
-{
     header('location: AdminLogin.php');
-}
+    
 if(isset($_GET['updt']))
 {
     $pagetitle = "Update E-Book";
     $upq1 = "select * from book where book_id ='$_GET[updt]'";
     $r1 = mysqli_query($con,$upq1);
     if($r1)
-    {
         $bookdtl = mysqli_fetch_assoc($r1);
-    }
 }
 ?>
-
 <html>
 <head>
     <title><?php echo $pagetitle;?></title>
     <link rel="stylesheet" href="CSS/comman.css">
     <link rel="stylesheet" href="CSS/adminhome.css">
     <link rel="stylesheet" href="CSS/booklist.css">
-    <style>
-        
-    </style>
 </head>
 <body>
     <?php include 'adminnavbar.php';?>
@@ -83,16 +76,10 @@ if(isset($_GET['updt']))
                             while($row1 = mysqli_fetch_assoc($result))
                             {
                                 if($row1['cat_id'] == $bookdtl['category'])
-                                {
                                     echo "<option value='$row1[cat_id]' selected>".$row1['cat_name']."</option>";
-                                }
                                 else
-                                {
-                                    echo "<option value='$row1[cat_id]'>".$row1['cat_name']."</option>";
-                                }
-                                   
+                                    echo "<option value='$row1[cat_id]'>".$row1['cat_name']."</option>";      
                             }
-
                         } 
                     ?>
                     </select>
@@ -109,9 +96,7 @@ if(isset($_GET['updt']))
                     <label class="lblfrm">Book File</label>
                     <input class="txtbox" type="file" name="bookfile">
                 </div>
-
                 <input class="addbookbtn" type="submit" name="addbook" value="<?php echo $pagetitle;?>">
-
                 <?php
                 if($_SERVER["REQUEST_METHOD"] == "POST")
                 {
@@ -122,20 +107,17 @@ if(isset($_GET['updt']))
                         $bookfiletmp = $_FILES['bookfile']['tmp_name'];
 
                         if (isset($bookfile) && !empty($bookfile)) {
-                            if (move_uploaded_file($bookfiletmp, "content/book/" . $bookfile)) {
+                            if (move_uploaded_file($bookfiletmp, "content/book/" . $bookfile))
                                 echo "Book uploaded";
-                            } else {
+                            else
                                 echo "Book not uploaded";
-                            }
                         }
                         if (isset($bookthumb) && !empty($bookthumb)) {
-                            if (move_uploaded_file($bookthumbtmp, "content/thumbnail/" . $bookthumb)) {
+                            if (move_uploaded_file($bookthumbtmp, "content/thumbnail/" . $bookthumb))
                                 echo "thumbnail uploaded";
-                            } else {
+                            else
                                 echo "thumbnail not uploaded";
-                            }
                         }
-
                         $bookname = $_POST['bname'];
                         $authname = $_POST['authname'];
                         $pubname = $_POST['pubname'];
@@ -146,27 +128,21 @@ if(isset($_GET['updt']))
                         $bookdesc = $_POST['bookdesc'];
                         $thumbloc = "content/thumbnail/". $bookthumb;
                         $bookloc = "content/book/" . $bookfile;
-
                         if($pagetitle == "Update E-Book"){
-                            $sql = "update book set name = '$bookname', author = '$authname', publisher = '$pubname',
-                            publishdate = '$pubdate', language = '$lang', category = '$bookcat', price = $price,
-                            description = '$bookdesc', booklink = '$bookloc', thumbnail = '$thumbloc' where book_id = '$_GET[updt]'";
+                            $sql = 'update book set name = "'.$bookname.'", author = "'.$authname.'", publisher = "'.$pubname.'",
+                            publishdate = "'.$pubdate.'", language = "'.$lang.'", category = "'.$bookcat.'", price = '.$price.',
+                            description = "'.$bookdesc.'", booklink = "'.$bookloc.'", thumbnail = "'.$thumbloc.'" where book_id = '.$_GET["updt"];
                         }
                         else
                         {
                             $sql = "insert into book(name,author,publisher,publishdate,language,category,price,description,booklink,thumbnail) 
                             values('$bookname','$authname','$pubname','$pubdate','$lang',$bookcat,$price,'$bookdesc','$bookloc','$thumbloc')";
                         }
-
                         $res = mysqli_query($con,$sql);
                         if($res)
-                        {
-                            header("location: bookslist.php");
-                        }
+                            echo "<script>window.location.href = 'bookslist.php'</script>";
                         else
-                        {
                             echo "Error :- ".mysqli_error($con);
-                        }
                         unset($_POST['addbook']);
                     }
                 }

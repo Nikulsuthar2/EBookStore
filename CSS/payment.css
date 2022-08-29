@@ -1,0 +1,32 @@
+.main{
+    display: flex;
+    justify-content: start;
+    gap: 20px;
+    padding: 20px;
+}
+
+.itmdtl{
+    min-width: 300px;
+}
+.carddtl{
+    width: min-content;
+    border: 1px solid black;
+    padding: 10px;
+}
+
+.inputbox{
+    height: 30px;
+    padding-left: 10px;
+}
+
+.paybtn{
+    border: none;
+    width: 100%;
+    height: 30px;
+    margin-top: 10px;
+    color: white;
+    background-color: royalblue;
+}
+.paybtn:hover{
+    background-color: rgb(27, 56, 145);
+}

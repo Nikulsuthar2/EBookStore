@@ -4,8 +4,8 @@
         <a class="nav-menu-btn" href="AdminHome.php">Dashboard</a>
         <a class="nav-menu-btn" href="bookslist.php">E-Books</a>
         <a class="nav-menu-btn" href="BookCategoryList.php">Category</a>
-        <a class="nav-menu-btn" href="Users.php">Users</a>
-        <a class="nav-menu-btn" href="Actors.php">Book Purchase report</a>
+        <a class="nav-menu-btn" href="Userlist.php">Users</a>
+        <a class="nav-menu-btn" href="BookPurchaseReport.php">Book Purchase report</a>
     </div>
     
     <a class="primarybtn" href="logout.php?id=2">LOG OUT</a>

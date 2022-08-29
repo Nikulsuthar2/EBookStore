@@ -22,12 +22,6 @@ if(isset($_GET['addcart']) && !empty($_GET['addcart']))
     }
     header("location: UserHome.php");
 }
-//====****************=======#############=======***************
-if(isset($_GET["addbuy"])&& !empty($_GET['addbuy'])){
-
-}
-//====****************=======#############=======***************
-
 ?>
 <html>
 <head>

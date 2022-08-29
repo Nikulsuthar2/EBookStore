@@ -33,8 +33,24 @@ else
                 <label class="info">Name    &nbsp;:  <?php echo $udata["name"]?></label>
                 <label class="info">Email   &nbsp;&nbsp;:  <?php echo $udata["email"]?></label>
             </div>
+            <h1>My Books</h1>
             <div class="user-books">
-                
+                <?php
+                    $mybooksql = "select * from purchased where user_id = $_SESSION[userid]";
+                    $res = mysqli_query($con,$mybooksql);
+                    if($res){
+                        while($book = mysqli_fetch_assoc($res))
+                        {
+                            $bookq ="select * from book where book_id = $book[book_id]";
+                            $bres = mysqli_query($con,$bookq);
+                            if($bres){
+                                $bookdtl = mysqli_fetch_assoc($bres);
+                                bookCard($bookdtl["thumbnail"],$bookdtl["name"],$bookdtl["price"],
+                                $bookdtl["book_id"],false,true,$bookdtl["booklink"]);
+                            }
+                        }
+                    }
+                ?>
             </div>
         </div>
     </div>

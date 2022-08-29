@@ -15,6 +15,8 @@ if(!isset($_SESSION['ausername']))
     <link rel="stylesheet" href="CSS/booklist.css">
 </head>
 <body style="font-family: 'Segoe UI';">
+    <?php include 'adminnavbar.php';?>
+    <hr>
     <div class="header">
         <h1>Book Category</h1>
         <a class="primarybtn" href="bookslist.php">Go Back</a>

@@ -66,7 +66,10 @@ if(isset($_GET['bookid']))
                         if($purchased)
                             echo "<div class='buybtn'><a href='$bookdtl[booklink]' target='_blank' style='text-decoration:none;color:white'>Open</a></div>";
                         else
-                            echo "<div class='buybtn'><a href='payment.php?cart=0'style='text-decoration:none;color:white'>Buy</a></div>";
+                            echo "<div>
+                            <a class='buybtn'href='payment.php?solo=$bookdtl[book_id]'
+                            style='display:block;text-decoration:none;color:white;width:100%'>Buy</a>
+                            </div>";
                     }
                     else
                         echo "<div class='buybtn'><a href='$bookdtl[booklink]' target='_blank' style='text-decoration:none;color:white'>Open</a></div>";

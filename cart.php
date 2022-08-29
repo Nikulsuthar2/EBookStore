@@ -49,25 +49,27 @@ if(isset($_GET['del']))
                     <?php
                     $count = 1;
                     $totalpay = 0;
-                    while($itm = mysqli_fetch_assoc($cartres)){
-                        $booksql = "select * from book where book_id = $itm[book_id]";
-                        $bookres = mysqli_query($con,$booksql);
-                        if($bookres)
-                        {
-                            $row = mysqli_fetch_assoc($bookres);
-                            $totalpay += $row["price"];
-                            echo "<tr>
-                                <td>$count</td>
-                                <td><img src='$row[thumbnail]' width='50px' height='60px'></td>
-                                <td>$row[name]</td>
-                                <td>&#8377 $row[price]</td>
-                                <td>
-                                    <a class='editbtn deletebtn' href='cart.php?del=$row[book_id]'>REMOVE</a>
-                                </td>
-                            </tr>";
-                            $count += 1;
-                        }
-                    }  
+					if($cartres){
+						while($itm = mysqli_fetch_assoc($cartres)){
+							$booksql = "select * from book where book_id = $itm[book_id]";
+							$bookres = mysqli_query($con,$booksql);
+							if($bookres)
+							{
+								$row = mysqli_fetch_assoc($bookres);
+								$totalpay += $row["price"];
+								echo "<tr>
+									<td>$count</td>
+									<td><img src='$row[thumbnail]' width='50px' height='60px'></td>
+									<td>$row[name]</td>
+									<td>&#8377 $row[price]</td>
+									<td>
+										<a class='editbtn deletebtn' href='cart.php?del=$row[book_id]'>REMOVE</a>
+									</td>
+								</tr>";
+								$count += 1;
+							}
+						} 
+					}					
                     echo "<tr><td colspan=3 style='text-align:end;padding-right:30px;font-size: 25px;'><b>Total Amount : </b></td>
                     <td colspan=2 style='color:green;font-size: 25px;'><b>&#8377 $totalpay</b></td></tr>"; 
                     if($count > 1){

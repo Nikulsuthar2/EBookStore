@@ -53,7 +53,12 @@ if(isset($_GET['del']))
                         <th width="120px">Operations</th>
                     </tr>
                     <?php
-                    $sql = "select * from book order by name";
+                    if(isset($_GET["cat"])){
+                        $sql = "select * from book where category = $_GET[cat] order by name";
+                    }
+                    else{
+                        $sql = "select * from book order by name";
+                    }
                     $res = mysqli_query($con,$sql);
                     if($res){
                         $count = 1;
