@@ -90,3 +90,31 @@ A simple E-Bookstore platform developed in PHP and MySQL. The project has two pr
 
 ---
 ## Screenshots
+
+![index](https://github.com/Nikulsuthar2/EBookStore/blob/main/Screenshot/index.png?raw=true)
+
+![signup](https://github.com/Nikulsuthar2/EBookStore/blob/main/Screenshot/usersignin.png?raw=true)
+
+![login](https://github.com/Nikulsuthar2/EBookStore/blob/main/Screenshot/user%20login.png?raw=true)
+
+![home](https://github.com/Nikulsuthar2/EBookStore/blob/main/Screenshot/home.png?raw=true)
+
+![cart](https://github.com/Nikulsuthar2/EBookStore/blob/main/Screenshot/cart.png?raw=true)
+
+![profile](https://github.com/Nikulsuthar2/EBookStore/blob/main/Screenshot/userprofile.png?raw=true)
+
+![details](https://github.com/Nikulsuthar2/EBookStore/blob/main/Screenshot/bookdetail.png?raw=true)
+
+![paydtl](https://github.com/Nikulsuthar2/EBookStore/blob/main/Screenshot/payment.png?raw=true)
+
+![admin dashboard](https://github.com/Nikulsuthar2/EBookStore/blob/main/Screenshot/adminhome.png?raw=true)
+
+![booklist](https://github.com/Nikulsuthar2/EBookStore/blob/main/Screenshot/bookslist.png?raw=true)
+
+![addbook](https://github.com/Nikulsuthar2/EBookStore/blob/main/Screenshot/addbook.png?raw=true)
+
+![category](https://github.com/Nikulsuthar2/EBookStore/blob/main/Screenshot/bookcategorylist.png?raw=true)
+
+![userlist](https://github.com/Nikulsuthar2/EBookStore/blob/main/Screenshot/userlist.png?raw=true)
+
+![purchasereport](https://github.com/Nikulsuthar2/EBookStore/blob/main/Screenshot/bookpurchasereport.png?raw=true)
