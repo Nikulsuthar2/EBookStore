@@ -62,7 +62,7 @@ A simple E-Bookstore platform developed in PHP and MySQL. The project has two pr
 3. **Start the Local Server**
    - Ensure Apache and MySQL are running.
    - Place the project folder in the `htdocs` directory (if using XAMPP).
-   - Access the website via `http://localhost/e-bookstore`.
+   - Access the website via `http://localhost/EBookStore`.
 
 4. **Admin Credentials**
    - Default admin credentials can be updated in the database under the `admin` table.
